@@ -1,0 +1,131 @@
+/* Center the products container and make it responsive */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 products per row */
+  gap: 20px; /* Consistent gap between products */
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%; /* Ensure it takes up full available width with some margin */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Product container styling */
+.p1 {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  border-radius: 15px;
+  transition: transform 0.3s ease-out;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 100%; /* Let the grid control the width */
+}
+
+/* Hover effect for products */
+.p1:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Product image styling */
+.p1 img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 10px;
+}
+
+/* Star ratings styling */
+.stars {
+  display: flex;
+  gap: 5px; /* Space between stars */
+  margin-top: 10px;
+}
+
+/* Adjust the size of the stars to be smaller */
+.stars .star {
+  width: 12px; /* Smaller star size */
+  height: 12px; /* Smaller star size */
+  object-fit: contain;
+}
+
+/* Product details styling */
+.product-details {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: #4CAF50;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.product-details p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Extra large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  }
+}
+
+/* Large screens (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+  }
+}
+
+/* Medium screens (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr); /* 2 products per row */
+  }
+  .p1 img {
+    height: 180px; /* Slightly smaller image for medium screens */
+  }
+}
+
+/* Small screens (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .products {
+    grid-template-columns: repeat(1, 1fr); /* Stack products vertically */
+  }
+  .p1 {
+    padding: 8px;
+  }
+  .p1 img {
+    height: 160px; /* Smaller image for small screens */
+  }
+}
+
+/* Extra small screens (less than 480px) */
+@media (max-width: 479px) {
+  .products {
+    grid-template-columns: 1fr; /* Stack products vertically */
+    gap: 10px; /* Reduced gap for smaller screens */
+  }
+  .p1 {
+    padding: 5px;
+  }
+  .p1 img {
+    height: 140px; /* Adjust image height */
+  }
+}

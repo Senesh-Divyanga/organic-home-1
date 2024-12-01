@@ -1,0 +1,165 @@
+.product-view {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-view .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  }
+  
+  .product-view .image-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-view .main-image img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    aspect-ratio: 4 / 3;
+
+  }
+  
+  .product-view .side-images {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap side images for small screens */
+    height: 100px;
+  }
+  
+  .product-view .side-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-view .side-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-view .product-details {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-view .product-details h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-view .product-details p {
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .product-view .product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .product-view button {
+    padding: 12px 25px;
+    background-color: #36a636;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .product-view button:hover {
+    background-color: #2e8b2e;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styling */
+  
+  /* Mobile - Portrait */
+  @media (max-width: 768px) {
+    .product-view {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .product-view .content {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .product-view .main-image img {
+      max-width: 100%; /* Full width on mobile */
+    }
+  
+    .product-view .side-images img {
+      width: 80px; /* Smaller side images on mobile */
+    }
+  
+    .product-view .product-details {
+      text-align: center; /* Center-align text */
+      padding: 10px;
+    }
+  
+    .product-view .product-details h1 {
+      font-size: 1.5rem;
+    }
+  
+    .product-view .product-details h2 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .product-view .content {
+      gap: 20px; /* Smaller gap for tablets */
+    }
+  
+    .product-view .side-images img {
+      width: 90px; /* Adjust image size for tablets */
+    }
+  
+    .product-view .product-details h1 {
+      font-size: 1.8rem;
+    }
+  
+    .product-view .product-details h2 {
+      font-size: 1.4rem;
+    }
+  }
+  .side-images img {
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    border: 2px solid transparent; /* Default border */
+  }
+  
+  .side-images img.active {
+    border: 2px solid #000; /* Highlight active image */
+    opacity: 0.7; /* Make it slightly transparent when it's active */
+  }
+  
+  .side-images img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  

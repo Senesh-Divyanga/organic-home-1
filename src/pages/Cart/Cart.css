@@ -1,0 +1,76 @@
+.cart {
+    padding: 20px;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .cart-item-image {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-controls button {
+    background-color: #28a745; /* Green background for buttons */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .quantity-controls span {
+    font-size: 18px;
+  }
+  
+  .cart-total {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #28a745; /* Green color for total price */
+  }
+  
+  .cart button {
+    background-color: #28a745; /* Green background for remove button */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cart button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

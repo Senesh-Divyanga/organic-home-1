@@ -1,0 +1,190 @@
+/* Navbar container positioning */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 90px;
+    padding: 0 20px; 
+    list-style: none;
+}
+
+/* Navbar inner container for content alignment */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Logo button style */
+.logo-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image style */
+.logo-btn img {
+    width: 300px;  /* Adjust based on your logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Logo hover effect */
+.logo-btn:hover img {
+    transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Navbar menu styles */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: rgb(37, 161, 53);
+}
+
+/* Menu items inside the menu */
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ensure no dots on list items */
+.menu li {
+    list-style: none; /* Explicitly remove dots from li */
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+/* Individual menu item */
+.menu li {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Menu item hover effect */
+.menu li:hover {
+    color: darkgreen;
+}
+
+/* Button styles inside menu */
+.menu button {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(37, 161, 53);
+    border: 1px solid rgb(37, 161, 53);
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover effect */
+.menu button:hover {
+    background-color: #eaffea;
+}
+
+/* Cart icon style */
+.cart-icon {
+    background: transparent;
+    font-size: 16px;
+    color: rgb(37, 161, 53);
+    border: 1px solid rgb(37, 161, 53);
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Cart icon hover effect */
+.cart-icon:hover {
+    background-color: #eaffea;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* Hamburger icon lines */
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(37, 161, 53);
+    border-radius: 2px;
+}
+
+/* Dropdown menu display */
+.menu.open {
+    display: flex;
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    /* Menu style when in mobile view */
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Show menu when the hamburger is clicked */
+    .menu.open ul {
+        display: flex;
+    }
+
+    /* Show hamburger on smaller screens */
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    /* Adjust logo size on small screens */
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    /* Adjust font size of menu items */
+    .menu ul {
+        font-size: 16px;
+    }
+
+    /* Button and cart icon size on smaller screens */
+    .menu button,
+    .cart-icon {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+}
+
+/* Body padding to prevent overlap with fixed navbar */
+body {
+    margin-top: 90px; /* Ensure content is pushed below the fixed navbar */
+}
